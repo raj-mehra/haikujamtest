@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.raj.haikujamtest.viewmodels.MainViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/transitions_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image_right"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:elevation="10dp"
+            android:src="@drawable/user_1"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="1dp"
+            app:civ_shadow="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/image"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image_left"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:elevation="10dp"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="1dp"
+            app:civ_shadow="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/image"
+            app:layout_constraintCircleAngle="315"
+            app:layout_constraintCircleRadius="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/user_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            android:minHeight="200dp"
+            android:shape="ring"
+            app:cardCornerRadius="0dp"
+            card_view:cardElevation="0dp"
+            card_view:cardBackgroundColor="@color/blueAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:fontFamily="sans-serif"
+                android:background="@null"
+                android:textColor="#ffffff"
+                android:id="@+id/imageButton"
+                android:text="Click Me" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image_bottomright"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:elevation="10dp"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="1dp"
+            app:civ_shadow="true"
+            android:src="@drawable/user_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/image"
+            app:layout_constraintCircleAngle="135"
+            app:layout_constraintCircleRadius="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/image"
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircleRadius="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
